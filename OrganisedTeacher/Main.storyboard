@@ -50,13 +50,45 @@
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="zAU-eJ-YWZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="zAU-eJ-YWZ" customClass="PrototypeCell" customModule="OrganisedTeacher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zAU-eJ-YWZ" id="jZg-oe-J0M">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDj-uI-LVf">
+                                                    <rect key="frame" x="15" y="10" width="50" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="0sq-x2-ZQg"/>
+                                                        <constraint firstAttribute="width" constant="50" id="UEc-q6-viw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-Po-XiI">
+                                                    <rect key="frame" x="310" y="10" width="50" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="bRI-cZ-KQj"/>
+                                                        <constraint firstAttribute="height" constant="25" id="uNv-di-Hsu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xDj-uI-LVf" firstAttribute="leading" secondItem="jZg-oe-J0M" secondAttribute="leading" constant="15" id="doQ-lE-8HM"/>
+                                                <constraint firstAttribute="trailing" secondItem="VOc-Po-XiI" secondAttribute="trailing" constant="15" id="efd-27-RHR"/>
+                                                <constraint firstItem="VOc-Po-XiI" firstAttribute="centerY" secondItem="jZg-oe-J0M" secondAttribute="centerY" id="uxB-NV-OaF"/>
+                                                <constraint firstItem="xDj-uI-LVf" firstAttribute="centerY" secondItem="jZg-oe-J0M" secondAttribute="centerY" id="zZ5-4z-wld"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="day1ClassroomNumberLabel" destination="VOc-Po-XiI" id="gsR-ro-CHp"/>
+                                            <outlet property="day1TeachingGroupLabel" destination="xDj-uI-LVf" id="cor-YB-cz3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -72,6 +104,9 @@
                             <constraint firstAttribute="trailing" secondItem="pCt-61-GfX" secondAttribute="trailing" id="fvb-cB-esG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="day1TableView" destination="2bQ-2b-B3s" id="EkD-wh-bKh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8x-V1-NTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +133,7 @@
                                     <navigationItem title="Day 2" id="twf-uk-SI6">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OQK-Ch-0TM">
                                             <connections>
-                                                <segue destination="zK7-db-Idj" kind="showDetail" identifier="Day1VCToAddUserInfoVC" id="OyN-C6-Yqy"/>
+                                                <segue destination="zK7-db-Idj" kind="showDetail" identifier="Day2VCToAddUserInfoVC" id="OyN-C6-Yqy"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -108,13 +143,45 @@
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <color key="backgroundColor" red="1" green="0.94489834510000004" blue="0.18849481800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VxN-sN-DWG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="VxN-sN-DWG" customClass="PrototypeCell" customModule="OrganisedTeacher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VxN-sN-DWG" id="LPn-OO-XK6">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-jl-B1t">
+                                                    <rect key="frame" x="15" y="9.5" width="50" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="GVE-Ag-mOK"/>
+                                                        <constraint firstAttribute="width" constant="50" id="grW-13-k37"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Se9-dV-udA">
+                                                    <rect key="frame" x="302" y="9.5" width="50" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Rdw-fL-E8n"/>
+                                                        <constraint firstAttribute="height" constant="25" id="ehZ-Om-acW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xcc-jl-B1t" firstAttribute="leading" secondItem="LPn-OO-XK6" secondAttribute="leading" constant="15" id="0vJ-BM-qnl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Se9-dV-udA" secondAttribute="trailing" constant="15" id="9xU-D9-FZG"/>
+                                                <constraint firstItem="Xcc-jl-B1t" firstAttribute="centerY" secondItem="LPn-OO-XK6" secondAttribute="centerY" id="OSp-LV-rjU"/>
+                                                <constraint firstItem="Se9-dV-udA" firstAttribute="centerY" secondItem="LPn-OO-XK6" secondAttribute="centerY" id="y11-ER-kE8"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="day2ClassroomNumberLabel" destination="Se9-dV-udA" id="5MP-Mq-X4n"/>
+                                            <outlet property="day2TeachingGroupLabel" destination="Xcc-jl-B1t" id="4uu-oz-Moi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -130,6 +197,9 @@
                             <constraint firstItem="kYt-bX-G1a" firstAttribute="top" secondItem="gta-DQ-NtO" secondAttribute="bottom" id="g5N-p1-8hZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="day2TableView" destination="gta-DQ-NtO" id="51y-Gd-l4l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0b-Lx-vWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,6 +246,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="zK7-db-Idj" eventType="touchUpInside" id="Ruh-gP-NCg"/>
+                                    <segue destination="PT4-N9-cDe" kind="unwind" unwindAction="goBackWithSegue:" id="LIg-NZ-JLa"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76S-Wn-8E0">
@@ -187,7 +258,7 @@
                                     <navigationItem title="Title" id="86Q-B0-EVK">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="nZ6-LC-9Aj">
                                             <connections>
-                                                <segue destination="PT4-N9-cDe" kind="unwind" unwindAction="goToSideMenuWithSegue:" id="ELT-Pz-bPI"/>
+                                                <segue destination="PT4-N9-cDe" kind="unwind" unwindAction="goBackWithSegue:" id="n7B-JC-wTR"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -212,6 +283,7 @@
                     <navigationItem key="navigationItem" title="Add Info " id="zg5-3h-byh" userLabel="Add Info"/>
                     <connections>
                         <outlet property="classroomNumberTextField" destination="bQa-ZM-jVJ" id="h9d-HY-Mk5"/>
+                        <outlet property="saveButton" destination="36o-5j-YDX" id="Fhn-u1-7M1"/>
                         <outlet property="teachingGroupTextField" destination="0EY-JK-eTR" id="K0T-AI-HiQ"/>
                     </connections>
                 </viewController>

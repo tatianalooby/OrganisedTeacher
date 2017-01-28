@@ -17,6 +17,7 @@
 		DEB6578E1E3AE939005B0E1D /* AddUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6578D1E3AE939005B0E1D /* AddUserInfoViewController.swift */; };
 		DEE87FF21E3B553400A8B1E5 /* ViewControllerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE87FF11E3B553400A8B1E5 /* ViewControllerList.swift */; };
 		DEE87FF61E3C60AF00A8B1E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE87FF51E3C60AF00A8B1E5 /* Main.storyboard */; };
+		DEE87FF81E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE87FF71E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DEB6578D1E3AE939005B0E1D /* AddUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserInfoViewController.swift; sourceTree = "<group>"; };
 		DEE87FF11E3B553400A8B1E5 /* ViewControllerList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerList.swift; sourceTree = "<group>"; };
 		DEE87FF51E3C60AF00A8B1E5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DEE87FF71E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				DEB6578D1E3AE939005B0E1D /* AddUserInfoViewController.swift */,
 				DEB657891E3AE897005B0E1D /* Day1ViewController.swift */,
 				DEB6578B1E3AE8DE005B0E1D /* Day2ViewController.swift */,
+				DEE87FF71E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift */,
 				DEE87FF51E3C60AF00A8B1E5 /* Main.storyboard */,
 				DEB6577C1E3AE4B1005B0E1D /* Assets.xcassets */,
 				DEB6577E1E3AE4B1005B0E1D /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE87FF81E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift in Sources */,
 				DEB657881E3AE5BC005B0E1D /* RootPageViewController.swift in Sources */,
 				DEB6578A1E3AE897005B0E1D /* Day1ViewController.swift in Sources */,
 				DEB6577B1E3AE4B1005B0E1D /* OrganisedTeacher.xcdatamodeld in Sources */,
