@@ -82,9 +82,9 @@ class Day2ViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Day1VCToAddUserInfoVC" {
+        if segue.identifier == "Day2VCToAddUserInfoVC" {
             let controller = segue.destination as! AddUserInfoViewController
-            controller.connectingSegueID = "Day1VCToAddUserInfoVC"
+            controller.connectingSegueID = "Day2VCToAddUserInfoVC"
         }
     }
     

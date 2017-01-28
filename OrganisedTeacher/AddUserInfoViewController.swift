@@ -37,7 +37,9 @@ class AddUserInfoViewController: UIViewController, UITextFieldDelegate {
 
 
     @IBAction func saveButtonTapped(_ sender: Any) {
+        
         switch connectingSegueID {
+            
         case "Day1VCToAddUserInfoVC":
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -61,11 +63,13 @@ class AddUserInfoViewController: UIViewController, UITextFieldDelegate {
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
             print(connectingSegueID)
+            
         default:
             print("default")
         }
         
     }
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

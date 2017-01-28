@@ -48,7 +48,7 @@
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2bQ-2b-B3s">
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.63995404469999995" blue="0.87683730299999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="zAU-eJ-YWZ" customClass="PrototypeCell" customModule="OrganisedTeacher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -58,10 +58,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDj-uI-LVf">
-                                                    <rect key="frame" x="15" y="10" width="50" height="25"/>
+                                                    <rect key="frame" x="15" y="10" width="70" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="0sq-x2-ZQg"/>
-                                                        <constraint firstAttribute="width" constant="50" id="UEc-q6-viw"/>
+                                                        <constraint firstAttribute="width" constant="70" id="UEc-q6-viw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -151,10 +151,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-jl-B1t">
-                                                    <rect key="frame" x="15" y="9.5" width="50" height="25"/>
+                                                    <rect key="frame" x="15" y="9.5" width="70" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="GVE-Ag-mOK"/>
-                                                        <constraint firstAttribute="width" constant="50" id="grW-13-k37"/>
+                                                        <constraint firstAttribute="width" constant="70" id="grW-13-k37"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -294,6 +294,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OyN-C6-Yqy"/>
+        <segue reference="6uu-Pf-ff8"/>
     </inferredMetricsTieBreakers>
 </document>
