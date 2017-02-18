@@ -8,8 +8,23 @@
         <attribute name="classroomNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="teachingGroupName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Day3TimeTableInfo" representedClassName="Day3TimeTableInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="classroomNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teachingGroupName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Day4TimeTableInfo" representedClassName="Day4TimeTableInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="classroomNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teachingGroupName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Day5TimeTableInfo" representedClassName="Day5TimeTableInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="classroomNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teachingGroupName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Day1TimeTableInfo" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="Day2TimeTableInfo" positionX="-54" positionY="9" width="128" height="75"/>
+        <element name="Day3TimeTableInfo" positionX="-36" positionY="27" width="128" height="75"/>
+        <element name="Day4TimeTableInfo" positionX="-18" positionY="36" width="128" height="75"/>
+        <element name="Day5TimeTableInfo" positionX="0" positionY="45" width="128" height="75"/>
     </elements>
 </model>

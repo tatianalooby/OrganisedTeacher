@@ -15,7 +15,6 @@ class Day1ViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var day1TimeTableInfoArray = [Day1TimeTableInfo]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,16 +82,16 @@ class Day1ViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Day1VCToAddUserInfoVC" {
-            let controller = segue.destination as! AddUserInfoViewController
-            controller.connectingSegueID = "Day1VCToAddUserInfoVC"
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "Day1VCToAddUserInfoVC" {
+//            let controller = segue.destination as! AddUserInfoViewController
+//            controller.connectingSegueID = "Day1VCToAddUserInfoVC"
+//        }
+//    }
     
-    @IBAction func addButtonTapped(_ sender: Any) {
-        
-    }
+//    @IBAction func addButtonTapped(_ sender: Any) {
+//        
+//    }
     
     @IBAction func goBack(segue: UIStoryboardSegue) {
         

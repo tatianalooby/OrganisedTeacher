@@ -18,4 +18,17 @@ class PrototypeCell: UITableViewCell {
     @IBOutlet weak var day2TeachingGroupLabel: UILabel!
     
     @IBOutlet weak var day2ClassroomNumberLabel: UILabel!
+    
+    @IBOutlet weak var day3TeachingGroupLabel: UILabel!
+    
+    @IBOutlet weak var day3ClassroomNumberLabel: UILabel!
+    
+    @IBOutlet weak var day4TeachingGroupLabel: UILabel!
+    
+    @IBOutlet weak var day4ClassroomNumberLabel: UILabel!
+    
+    @IBOutlet weak var day5TeachingGroupLabel: UILabel!
+    
+    @IBOutlet weak var day5ClassroomNumberLabel: UILabel!
+    
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class AddUserInfoViewController: UIViewController, UITextFieldDelegate {
     
-    var connectingSegueID: String = ""
+    var senderVCIdentifier: String = ""
     
     @IBOutlet weak var teachingGroupTextField: UITextField!
     @IBOutlet weak var classroomNumberTextField: UITextField!
@@ -38,9 +38,9 @@ class AddUserInfoViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-        switch connectingSegueID {
+        switch senderVCIdentifier {
             
-        case "Day1VCToAddUserInfoVC":
+        case "Day1ViewController":
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let day1TimeTableInfo = Day1TimeTableInfo(context: context)
@@ -50,9 +50,9 @@ class AddUserInfoViewController: UIViewController, UITextFieldDelegate {
             //Save the data to core data
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
-            print(connectingSegueID)
+            print(senderVCIdentifier)
             
-        case "Day2VCToAddUserInfoVC":
+        case "Day2ViewController":
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let day2TimeTableInfo = Day2TimeTableInfo(context: context)
@@ -62,7 +62,43 @@ class AddUserInfoViewController: UIViewController, UITextFieldDelegate {
             //Save the data to core data
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
-            print(connectingSegueID)
+            print(senderVCIdentifier)
+            
+        case "Day3ViewController":
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let day3TimeTableInfo = Day3TimeTableInfo(context: context)
+            day3TimeTableInfo.teachingGroupName = teachingGroupTextField.text
+            day3TimeTableInfo.classroomNumber = classroomNumberTextField.text
+            
+            //Save the data to core data
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            print(senderVCIdentifier)
+            
+        case "Day4ViewController":
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let day4TimeTableInfo = Day4TimeTableInfo(context: context)
+            day4TimeTableInfo.teachingGroupName = teachingGroupTextField.text
+            day4TimeTableInfo.classroomNumber = classroomNumberTextField.text
+            
+            //Save the data to core data
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            print(senderVCIdentifier)
+            
+        case "Day5ViewController":
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let day5TimeTableInfo = Day5TimeTableInfo(context: context)
+            day5TimeTableInfo.teachingGroupName = teachingGroupTextField.text
+            day5TimeTableInfo.classroomNumber = classroomNumberTextField.text
+            
+            //Save the data to core data
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            print(senderVCIdentifier)
             
         default:
             print("default")

@@ -14,12 +14,15 @@ class Day2ViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var day2TimeTableInfoArray = [Day2TimeTableInfo]()
     
+    var tag: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         day2TableView.delegate = self
         day2TableView.dataSource = self
-        
+        tag = 2
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,16 +84,16 @@ class Day2ViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Day2VCToAddUserInfoVC" {
-            let controller = segue.destination as! AddUserInfoViewController
-            controller.connectingSegueID = "Day2VCToAddUserInfoVC"
-        }
-    }
-    
-    @IBAction func addButtonTapped(_ sender: Any) {
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "Day2VCToAddUserInfoVC" {
+//            let controller = segue.destination as! AddUserInfoViewController
+//            controller.connectingSegueID = "Day2VCToAddUserInfoVC"
+//        }
+//    }
+//    
+//    @IBAction func addButtonTapped(_ sender: Any) {
+//        
+//    }
     
     @IBAction func goBack(segue: UIStoryboardSegue) {
         

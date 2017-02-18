@@ -8,27 +8,38 @@
 
 import UIKit
 
-class RootPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class RootPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    var senderVCIdentifier = ""
+
     
     //May be can be deleted from here
-    lazy var viewControllersList: [UIViewController] = {
-        
-        let myStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let day1VC = myStoryBoard.instantiateViewController(withIdentifier: "Day1ViewController")
-        let day2VC = myStoryBoard.instantiateViewController(withIdentifier: "Day2ViewController")
-        
-        return [day1VC, day2VC]
-        
-    }()
+//    lazy var viewControllersList: [UIViewController] = {
+//        
+//        let myStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        let day1VC = myStoryBoard.instantiateViewController(withIdentifier: "Day1ViewController")
+//        let day2VC = myStoryBoard.instantiateViewController(withIdentifier: "Day2ViewController")
+//        
+//        return [day1VC, day2VC]
+//        
+//    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.dataSource = self
+        self.delegate = self
+        
+        self.navigationItem.title = "Monday"
+        self.navigationController!.navigationBar.isTranslucent = false
+        
+        senderVCIdentifier = "Day1ViewController"
         
         if let firstViewController = viewControllersList.first {
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+            print("check1")
         }
     }
 
@@ -56,7 +67,75 @@ class RootPageViewController: UIPageViewController, UIPageViewControllerDataSour
         return viewControllersList[nextIndex]
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RooPageVCToAddUserInfoVC" {
+            let controller = segue.destination as! AddUserInfoViewController
+            controller.senderVCIdentifier = senderVCIdentifier
+        }
+    }
+
     
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        if (!completed) {
+            print("no change")
+            return
+        }
+        
+        if let firstViewController = viewControllers?.first,
+            let arrayIndex = viewControllersList.index(of: firstViewController) {
+            //print(firstViewController)
+            switch arrayIndex {
+            case 0:
+                self.navigationController!.navigationBar.topItem!.title = "Monday"
+                senderVCIdentifier = viewControllersList[arrayIndex].restorationIdentifier!
+                print(senderVCIdentifier)
+
+                //self.navigationController!.navigationBar.topItem!.set =
+                break
+                
+            case 1:
+                self.navigationController!.navigationBar.topItem!.title = "Tuesday"
+                senderVCIdentifier = viewControllersList[arrayIndex].restorationIdentifier!
+                print(senderVCIdentifier)
+                break
+                
+            case 2:
+                self.navigationController!.navigationBar.topItem!.title = "Wednesday"
+                senderVCIdentifier = viewControllersList[arrayIndex].restorationIdentifier!
+                print(senderVCIdentifier)
+                break
+
+            case 3:
+                self.navigationController!.navigationBar.topItem!.title = "Thursday"
+                senderVCIdentifier = viewControllersList[arrayIndex].restorationIdentifier!
+                print(senderVCIdentifier)
+                break
+
+            case 4:
+                self.navigationController!.navigationBar.topItem!.title = "Friday"
+                senderVCIdentifier = viewControllersList[arrayIndex].restorationIdentifier!
+                print(senderVCIdentifier)
+                break
+//
+//            case 5:
+//                self.navigationController!.navigationBar.topItem!.title = "Saturday"
+//                break
+//                
+//            case 6:
+//                self.navigationController!.navigationBar.topItem!.title = "Sunday"
+//                break
+                
+            default:
+                self.navigationController!.navigationBar.topItem!.title = "Timetable"
+                
+                
+            }
+        }
+    }
+
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+    }
 
     /*
     // MARK: - Navigation
