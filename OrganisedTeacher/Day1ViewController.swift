@@ -45,6 +45,8 @@ class Day1ViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = day1TableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PrototypeCell
         let day1TimeTableInfo = day1TimeTableInfoArray[indexPath.row]
+        cell.day1StartTimeLabel.text = day1TimeTableInfo.startTime
+        cell.day1FinishTimeLabel.text = day1TimeTableInfo.finishTime
         cell.day1TeachingGroupLabel.text = day1TimeTableInfo.teachingGroupName
         cell.day1ClassroomNumberLabel.text = day1TimeTableInfo.classroomNumber
         return cell

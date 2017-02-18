@@ -2,6 +2,8 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Day1TimeTableInfo" representedClassName="Day1TimeTableInfo" syncable="YES" codeGenerationType="class">
         <attribute name="classroomNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finishTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="teachingGroupName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Day2TimeTableInfo" representedClassName="Day2TimeTableInfo" syncable="YES" codeGenerationType="class">
@@ -21,7 +23,7 @@
         <attribute name="teachingGroupName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Day1TimeTableInfo" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Day1TimeTableInfo" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Day2TimeTableInfo" positionX="-54" positionY="9" width="128" height="75"/>
         <element name="Day3TimeTableInfo" positionX="-36" positionY="27" width="128" height="75"/>
         <element name="Day4TimeTableInfo" positionX="-18" positionY="36" width="128" height="75"/>
