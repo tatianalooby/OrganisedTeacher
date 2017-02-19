@@ -26,10 +26,13 @@ class Day1ViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(_ animated: Bool) {
         
         //get data from core data
+        print("Day1VC view will appear")
+        
         getData()
         
         //reload the tableview
-        day1TableView.reloadData()
+        self.day1TableView.reloadData()
+        print("reload day1TableView success")
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +48,9 @@ class Day1ViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = day1TableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PrototypeCell
         let day1TimeTableInfo = day1TimeTableInfoArray[indexPath.row]
+        //NEED TO DO: cell.day1InfoButton.isHidden = true
+        cell.day1InfoButton.tag = indexPath.row
+        cell.day1InfoButton.addTarget(self, action: #selector(addInfoButtonTapped(button:)), for: UIControlEvents.touchUpInside)
         cell.day1StartTimeLabel.text = day1TimeTableInfo.startTime
         cell.day1FinishTimeLabel.text = day1TimeTableInfo.finishTime
         cell.day1TeachingGroupLabel.text = day1TimeTableInfo.teachingGroupName
@@ -52,36 +58,56 @@ class Day1ViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    //delete row
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    // Enable row selection
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row selected")
         
-        if editingStyle == .delete {
-            let day1TimeTableInfo = day1TimeTableInfoArray[indexPath.row]
-            context.delete(day1TimeTableInfo)
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
-            //fetch new updated data from core data
-            getData()
-            
-        }
-        //reload new updated data
-        day1TableView.reloadData()
     }
+    
+    // Delete row (previous version, now deleting from AmendUserInoViewController
+    
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        
+//        if editingStyle == .delete {
+//            let day1TimeTableInfo = day1TimeTableInfoArray[indexPath.row]
+//            context.delete(day1TimeTableInfo)
+//            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//            
+//            //fetch new updated data from core data
+//            getData()
+//            
+//        }
+//        //reload new updated data
+//        day1TableView.reloadData()
+//    }
     
     //Function to fetch data from core data
     func getData() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
             day1TimeTableInfoArray = try context.fetch(Day1TimeTableInfo.fetchRequest())
+            print("fetching success")
         } catch {
             print("fetching failed")
         }
+    }
+    
+    
+    func addInfoButtonTapped(button: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "AmendUserInfoViewController") as! AmendUserInfoViewController
+        print("info button tapped")
+        let tagToPass = button.tag
+        controller.tagToReceive = tagToPass
+        print(tagToPass)
+        self.navigationController?.pushViewController(controller, animated: true)
+        controller.viewWillAppear(true)
+        print("presented")
     }
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -95,12 +121,20 @@ class Day1ViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        
 //    }
     
+    // Unwind segue from AddUserInfoViewController
     @IBAction func goBack(segue: UIStoryboardSegue) {
         
         print("go back")
         
     }
     
+    //Unwind seque from AmendUSerInfoViewController
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        
+        print("go back")
+        
+    }
+
     /*
     // MARK: - Navigation
 

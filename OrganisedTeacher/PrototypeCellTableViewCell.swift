@@ -19,6 +19,8 @@ class PrototypeCell: UITableViewCell {
 
     @IBOutlet weak var day1FinishTimeLabel: UILabel!
     
+    @IBOutlet weak var day1InfoButton: UIButton!
+    
     @IBOutlet weak var day2TeachingGroupLabel: UILabel!
     
     @IBOutlet weak var day2ClassroomNumberLabel: UILabel!

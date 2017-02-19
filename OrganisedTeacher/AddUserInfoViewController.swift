@@ -32,7 +32,9 @@ class AddUserInfoViewController: UIViewController, UIPickerViewDataSource, UIPic
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startTextField.delegate = self
+        saveButton.setTitleColor(UIColor(red: 0, green: 125/255, blue: 1.0, alpha: 1.0), for: UIControlState.normal)
+        
+        //startTextField.delegate = self
         
         // Instantiate customPickerView
         customTimePicker = UIPickerView()
@@ -138,6 +140,8 @@ class AddUserInfoViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         saveButton.isUserInteractionEnabled = true
+        saveButton.backgroundColor = UIColor(red: 0, green: 125/255, blue: 1.0, alpha: 1.0)
+        saveButton.setTitleColor(.white, for: UIControlState.normal)
     }
 
 

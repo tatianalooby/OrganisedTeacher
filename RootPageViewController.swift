@@ -136,6 +136,18 @@ class RootPageViewController: UIPageViewController, UIPageViewControllerDataSour
 
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
     }
+    
+    // Set up UINavigationControllerDelegate methods
+//    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool){
+//        
+//        viewController.viewWillAppear(true)
+//    }
+//    
+//    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool){
+//        
+//        viewController.viewDidAppear(true)
+//    }
+    
 
     /*
     // MARK: - Navigation
