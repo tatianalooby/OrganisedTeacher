@@ -27,7 +27,7 @@ class AmendUserInfoViewController: UIViewController {
     
     @IBOutlet weak var classroomTextField: UITextField!
     
-    var day1TimeTableInfoArray = [Day1TimeTableInfo]()
+    var dayTimeTableInfoArray = [DayTimeTableInfo]()
     
     var tagToReceive: Int?
     
@@ -37,11 +37,11 @@ class AmendUserInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
         if let tag = tagToReceive {
             print(tag)
-            let day1TimeTableInfo = day1TimeTableInfoArray[tag]
-            startTextField.text = day1TimeTableInfo.startTime
-            finishTextField.text = day1TimeTableInfo.finishTime
-            classNameTextField.text = day1TimeTableInfo.teachingGroupName
-            classroomTextField.text = day1TimeTableInfo.classroomNumber
+            let dayTimeTableInfo = dayTimeTableInfoArray[tag]
+            startTextField.text = dayTimeTableInfo.startTime
+            finishTextField.text = dayTimeTableInfo.finishTime
+            classNameTextField.text = dayTimeTableInfo.teachingGroupName
+            classroomTextField.text = dayTimeTableInfo.classroomNumber
         }
     }
     
@@ -61,7 +61,7 @@ class AmendUserInfoViewController: UIViewController {
     func getData() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
-            day1TimeTableInfoArray = try context.fetch(Day1TimeTableInfo.fetchRequest())
+            dayTimeTableInfoArray = try context.fetch(DayTimeTableInfo.fetchRequest())
             print("fetching success")
         } catch {
             print("fetching failed")
@@ -73,8 +73,8 @@ class AmendUserInfoViewController: UIViewController {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         if let tag = tagToReceive {
-            let day1TimeTableInfo = day1TimeTableInfoArray[tag]
-            context.delete(day1TimeTableInfo)
+            let dayTimeTableInfo = dayTimeTableInfoArray[tag]
+            context.delete(dayTimeTableInfo)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
         }
         

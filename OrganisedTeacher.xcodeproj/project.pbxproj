@@ -8,28 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DE1E57901E58B01100CB0707 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E578F1E58B01100CB0707 /* CustomButton.swift */; };
-		DE9CD91E1E55FC3A0058960E /* Day3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD91D1E55FC3A0058960E /* Day3ViewController.swift */; };
-		DE9CD9201E5603270058960E /* Day4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD91F1E5603270058960E /* Day4ViewController.swift */; };
-		DE9CD9221E561E270058960E /* Day5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD9211E561E270058960E /* Day5ViewController.swift */; };
 		DE9CD9471E58460B0058960E /* AmendUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD9461E58460B0058960E /* AmendUserInfoViewController.swift */; };
 		DEB657731E3AE4B0005B0E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB657721E3AE4B0005B0E1D /* AppDelegate.swift */; };
 		DEB6577B1E3AE4B1005B0E1D /* OrganisedTeacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEB657791E3AE4B1005B0E1D /* OrganisedTeacher.xcdatamodeld */; };
 		DEB6577D1E3AE4B1005B0E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB6577C1E3AE4B1005B0E1D /* Assets.xcassets */; };
 		DEB657801E3AE4B1005B0E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB6577E1E3AE4B1005B0E1D /* LaunchScreen.storyboard */; };
 		DEB657881E3AE5BC005B0E1D /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB657871E3AE5BC005B0E1D /* RootPageViewController.swift */; };
-		DEB6578A1E3AE897005B0E1D /* Day1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB657891E3AE897005B0E1D /* Day1ViewController.swift */; };
-		DEB6578C1E3AE8DE005B0E1D /* Day2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6578B1E3AE8DE005B0E1D /* Day2ViewController.swift */; };
+		DEB6578A1E3AE897005B0E1D /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB657891E3AE897005B0E1D /* DayViewController.swift */; };
 		DEB6578E1E3AE939005B0E1D /* AddUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6578D1E3AE939005B0E1D /* AddUserInfoViewController.swift */; };
-		DEE87FF21E3B553400A8B1E5 /* ViewControllerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE87FF11E3B553400A8B1E5 /* ViewControllerList.swift */; };
 		DEE87FF61E3C60AF00A8B1E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE87FF51E3C60AF00A8B1E5 /* Main.storyboard */; };
 		DEE87FF81E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE87FF71E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE1E578F1E58B01100CB0707 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		DE9CD91D1E55FC3A0058960E /* Day3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day3ViewController.swift; sourceTree = "<group>"; };
-		DE9CD91F1E5603270058960E /* Day4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day4ViewController.swift; sourceTree = "<group>"; };
-		DE9CD9211E561E270058960E /* Day5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day5ViewController.swift; sourceTree = "<group>"; };
 		DE9CD9461E58460B0058960E /* AmendUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmendUserInfoViewController.swift; sourceTree = "<group>"; };
 		DEB6576F1E3AE4B0005B0E1D /* OrganisedTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrganisedTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB657721E3AE4B0005B0E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,10 +30,8 @@
 		DEB6577F1E3AE4B1005B0E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEB657811E3AE4B1005B0E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEB657871E3AE5BC005B0E1D /* RootPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootPageViewController.swift; path = ../RootPageViewController.swift; sourceTree = "<group>"; };
-		DEB657891E3AE897005B0E1D /* Day1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day1ViewController.swift; sourceTree = "<group>"; };
-		DEB6578B1E3AE8DE005B0E1D /* Day2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day2ViewController.swift; sourceTree = "<group>"; };
+		DEB657891E3AE897005B0E1D /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		DEB6578D1E3AE939005B0E1D /* AddUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserInfoViewController.swift; sourceTree = "<group>"; };
-		DEE87FF11E3B553400A8B1E5 /* ViewControllerList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerList.swift; sourceTree = "<group>"; };
 		DEE87FF51E3C60AF00A8B1E5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DEE87FF71E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypeCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,14 +68,9 @@
 			children = (
 				DEB657721E3AE4B0005B0E1D /* AppDelegate.swift */,
 				DEB657871E3AE5BC005B0E1D /* RootPageViewController.swift */,
-				DEE87FF11E3B553400A8B1E5 /* ViewControllerList.swift */,
 				DE9CD9461E58460B0058960E /* AmendUserInfoViewController.swift */,
 				DEB6578D1E3AE939005B0E1D /* AddUserInfoViewController.swift */,
-				DEB657891E3AE897005B0E1D /* Day1ViewController.swift */,
-				DEB6578B1E3AE8DE005B0E1D /* Day2ViewController.swift */,
-				DE9CD91D1E55FC3A0058960E /* Day3ViewController.swift */,
-				DE9CD91F1E5603270058960E /* Day4ViewController.swift */,
-				DE9CD9211E561E270058960E /* Day5ViewController.swift */,
+				DEB657891E3AE897005B0E1D /* DayViewController.swift */,
 				DEE87FF71E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift */,
 				DE1E578F1E58B01100CB0707 /* CustomButton.swift */,
 				DEE87FF51E3C60AF00A8B1E5 /* Main.storyboard */,
@@ -170,18 +155,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE1E57901E58B01100CB0707 /* CustomButton.swift in Sources */,
-				DE9CD9221E561E270058960E /* Day5ViewController.swift in Sources */,
 				DEE87FF81E3CDD1800A8B1E5 /* PrototypeCellTableViewCell.swift in Sources */,
 				DEB657881E3AE5BC005B0E1D /* RootPageViewController.swift in Sources */,
-				DEB6578A1E3AE897005B0E1D /* Day1ViewController.swift in Sources */,
+				DEB6578A1E3AE897005B0E1D /* DayViewController.swift in Sources */,
 				DEB6577B1E3AE4B1005B0E1D /* OrganisedTeacher.xcdatamodeld in Sources */,
 				DE9CD9471E58460B0058960E /* AmendUserInfoViewController.swift in Sources */,
 				DEB6578E1E3AE939005B0E1D /* AddUserInfoViewController.swift in Sources */,
-				DE9CD91E1E55FC3A0058960E /* Day3ViewController.swift in Sources */,
 				DEB657731E3AE4B0005B0E1D /* AppDelegate.swift in Sources */,
-				DEB6578C1E3AE8DE005B0E1D /* Day2ViewController.swift in Sources */,
-				DE9CD9201E5603270058960E /* Day4ViewController.swift in Sources */,
-				DEE87FF21E3B553400A8B1E5 /* ViewControllerList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

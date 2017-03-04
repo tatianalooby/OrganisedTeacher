@@ -10,8 +10,8 @@ import UIKit
 
 class AddUserInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate {
     
-    var senderVCIdentifier: String = ""
-        
+    var senderVCIndex: Int!
+    
     var customTimePicker: UIPickerView!
     
     var hours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
@@ -47,14 +47,14 @@ class AddUserInfoViewController: UIViewController, UIPickerViewDataSource, UIPic
         
         // Enable action when user taps startTextField or finishTextField
         startTextField.addTarget(self, action: #selector(didTouchDownStartTextField(textField:)), for: UIControlEvents.touchDown)
-
+        
         finishTextField.addTarget(self, action: #selector(didTouchDownFinishTextField(textField:)), for: UIControlEvents.touchDown)
         
         // Add tap gesture to dismiss customPickerView when user taps anywhere on the view
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideCustomTimePicker))
         view.addGestureRecognizer(tapGesture)
-
-        //Deactivate the save button until user types some info 
+        
+        //Deactivate the save button until user types some info
         
         teachingGroupTextField.delegate = self
         classroomNumberTextField.delegate = self
@@ -63,7 +63,7 @@ class AddUserInfoViewController: UIViewController, UIPickerViewDataSource, UIPic
             
             saveButton.isUserInteractionEnabled = false
         }
-
+        
     }
     
     // UIPickerViewDataSource
@@ -136,101 +136,84 @@ class AddUserInfoViewController: UIViewController, UIPickerViewDataSource, UIPic
         finishLabel.backgroundColor = UIColor.white
         finishLabel.textColor = UIColor.black
     }
-
+    
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         saveButton.isUserInteractionEnabled = true
         saveButton.backgroundColor = UIColor(red: 0, green: 125/255, blue: 1.0, alpha: 1.0)
         saveButton.setTitleColor(.white, for: UIControlState.normal)
     }
-
-
+    
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-        switch senderVCIdentifier {
+        switch senderVCIndex {
             
-        case "Day1ViewController":
+        case 0:
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let day1TimeTableInfo = Day1TimeTableInfo(context: context)
-            day1TimeTableInfo.startTime = startTextField.text
-            day1TimeTableInfo.finishTime = finishTextField.text
-            day1TimeTableInfo.teachingGroupName = teachingGroupTextField.text
-            day1TimeTableInfo.classroomNumber = classroomNumberTextField.text
+            let dayTimeTableInfo = DayTimeTableInfo(context: context)
+            dayTimeTableInfo.day = String(senderVCIndex)
+            dayTimeTableInfo.startTime = startTextField.text
+            dayTimeTableInfo.finishTime = finishTextField.text
+            dayTimeTableInfo.teachingGroupName = teachingGroupTextField.text
+            dayTimeTableInfo.classroomNumber = classroomNumberTextField.text
             
             //Save the data to core data
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
-            print(senderVCIdentifier)
+            print(senderVCIndex)
             
-        case "Day2ViewController":
+        case 1:
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let day2TimeTableInfo = Day2TimeTableInfo(context: context)
-            day2TimeTableInfo.teachingGroupName = teachingGroupTextField.text
-            day2TimeTableInfo.classroomNumber = classroomNumberTextField.text
+            let dayTimeTableInfo = DayTimeTableInfo(context: context)
+            dayTimeTableInfo.day = String(senderVCIndex)
+            dayTimeTableInfo.startTime = startTextField.text
+            dayTimeTableInfo.finishTime = finishTextField.text
+            dayTimeTableInfo.teachingGroupName = teachingGroupTextField.text
+            dayTimeTableInfo.classroomNumber = classroomNumberTextField.text
             
             //Save the data to core data
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
-            print(senderVCIdentifier)
+            print(senderVCIndex)
             
-        case "Day3ViewController":
+        case 2:
             
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let day3TimeTableInfo = Day3TimeTableInfo(context: context)
-            day3TimeTableInfo.teachingGroupName = teachingGroupTextField.text
-            day3TimeTableInfo.classroomNumber = classroomNumberTextField.text
+            let dayTimeTableInfo = DayTimeTableInfo(context: context)
+            dayTimeTableInfo.day = String(senderVCIndex)
+            dayTimeTableInfo.startTime = startTextField.text
+            dayTimeTableInfo.finishTime = finishTextField.text
+            dayTimeTableInfo.teachingGroupName = teachingGroupTextField.text
+            dayTimeTableInfo.classroomNumber = classroomNumberTextField.text
             
             //Save the data to core data
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
-            print(senderVCIdentifier)
-            
-        case "Day4ViewController":
-            
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let day4TimeTableInfo = Day4TimeTableInfo(context: context)
-            day4TimeTableInfo.teachingGroupName = teachingGroupTextField.text
-            day4TimeTableInfo.classroomNumber = classroomNumberTextField.text
-            
-            //Save the data to core data
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
-            print(senderVCIdentifier)
-            
-        case "Day5ViewController":
-            
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let day5TimeTableInfo = Day5TimeTableInfo(context: context)
-            day5TimeTableInfo.teachingGroupName = teachingGroupTextField.text
-            day5TimeTableInfo.classroomNumber = classroomNumberTextField.text
-            
-            //Save the data to core data
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
-            print(senderVCIdentifier)
+            print(senderVCIndex)
             
         default:
             print("default")
         }
         
     }
-        
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
